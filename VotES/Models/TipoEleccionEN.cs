@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VotES.Models
 {
-    internal class Departamento
+    internal class TipoEleccionEN
     {
     }
 }
