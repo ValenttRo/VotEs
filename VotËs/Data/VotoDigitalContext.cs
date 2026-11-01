@@ -7,6 +7,10 @@ namespace VotËs.Data
 {
     public class VotoDigitalContext : DbContext
     {
+        public VotoDigitalContext()
+        {
+            
+        }
         public VotoDigitalContext(DbContextOptions<VotoDigitalContext> options)
            : base(options) { }
         
@@ -22,4 +26,5 @@ namespace VotËs.Data
         public DbSet<VotoEN> voto { get; set; }
 
     }
+    
 }

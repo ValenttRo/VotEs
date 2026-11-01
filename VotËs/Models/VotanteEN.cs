@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace VotES.Models
 {
     public class VotanteEN
     {
-        public int IdVotante { get; set; }
+        [Key]
+        public int Id { get; set; }
         public string DocumentoHash { get; set; }
         public string Contraseña {  get; set; }
-        public ushort IdMunicipio { get; set; }
+        public int IdMunicipio { get; set; }
         public bool Habilitado { get; set; }
-        public int IntentosFallidos {  get; set; }
+        public int IntentoFallidos {  get; set; }
         public DateTime? Bloqueado {  get; set; }
     }
 }
