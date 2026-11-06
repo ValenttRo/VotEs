@@ -11,7 +11,7 @@ namespace VotES.Models
         public int Id { get; set; }
         public string DocumentoHash { get; set; }
         public string Contraseña {  get; set; }
-        public int IdMunicipio { get; set; }
+        public int? IdMunicipio { get; set; }
         public bool Habilitado { get; set; }
         public int IntentoFallidos {  get; set; }
         public DateTime? Bloqueado {  get; set; }

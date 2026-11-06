@@ -10,8 +10,8 @@ namespace VotES.Models
         [Key]
         public int IdCandidato { get; set; }
         public int IdEleccion  { get; set; }
-        public int IdPartido {  get; set; }
+        public int? IdPartido {  get; set; }
         public string Nombre {  get; set; }
-        public bool EnBlanco {  get; set; }
+        public bool Enblanco {  get; set; }
     }
 }

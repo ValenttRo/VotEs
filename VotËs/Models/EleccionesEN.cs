@@ -10,15 +10,17 @@ namespace VotES.Models
         [Key]
         public int IdEleccion { get; set; }
         public int IdTipo { get; set; }
+        public TipoEleccionEN TipoEleccion { get; set; } = null;
         public string Nombre { get; set; }
-        public int IdDepartamento {  get; set; }
-        public int IdMunicipio {  get; set; }
+        public int? IdDepartamento {  get; set; }
+        public int? IdMunicipio {  get; set; }
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFin { get; set; }
         public enum Estado
         {
-            Abiertas,
-            Cerradas
+            Draft,
+            Open,
+            Closed
         }
         public Estado EstadoDeEleccion{  get; set; }
     }

@@ -10,12 +10,12 @@ namespace VotES.Models
         [Key]
         public int IdTipo {  get; set; }
         public string Nombre { get; set; }
-        public enum Alcance
+        public enum RangoAlcance
         {
             Nacional,
             Departamental,
             Municipal
         }
-        public Alcance AlcanceEleccion { get; set; }
+        public RangoAlcance Alcance { get; set; }
     }
 }

@@ -4,9 +4,9 @@ namespace VotËs.Models
 {
     public class ParticipacionEN
     {
-        [Key]
-        public int VotoId { get; set; }
-        public int EleccionId { get; set; }
-        public DateTime FechaDeVoto { get; set; }
+        
+        public int IdVotante { get; set; }
+        public int IdEleccion { get; set; }
+        public DateOnly FechaDeVoto { get; set; }
     }
 }

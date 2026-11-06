@@ -9,7 +9,7 @@ namespace VotES.Models
     {
         [Key]
         public int Municipio {  get; set; }
-        public int IdDepartamento { get; set; }
+        public int Departamento { get; set; }
         public string Nombre { get; set; }
 
     }

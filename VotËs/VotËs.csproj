@@ -16,4 +16,11 @@
     <PackageReference Include="MySql.EntityFrameworkCore" Version="10.0.12" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dtos\Auth\" />
+    <Folder Include="Dtos\Participaciones\" />
+    <Folder Include="Dtos\Resultados\" />
+    <Folder Include="Dtos\Votos\" />
+  </ItemGroup>
+
 </Project>

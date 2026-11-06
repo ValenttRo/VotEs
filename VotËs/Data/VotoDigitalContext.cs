@@ -23,7 +23,30 @@ namespace VotËs.Data
         public DbSet<PartidosEN> partidos { get; set; }
         public DbSet<TipoEleccionEN> tipo_eleccion { get; set; }
         public DbSet<VotanteEN> votante {  get; set; }
-        public DbSet<VotoEN> voto { get; set; }
+        public DbSet<VotoEN> votos { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder mb)
+        {
+            base.OnModelCreating(mb);
+
+            mb.Entity<ParticipacionEN>(e => 
+            {
+                e.HasKey(i => new{i.IdVotante, i.IdEleccion });
+
+            });
+            mb.Entity<TipoEleccionEN>(e =>
+            {
+                e.Property(i => i.Alcance).HasConversion<string>();
+            });
+            mb.Entity<EleccionesEN>(e =>
+            {
+                e.Property(i => i.EstadoDeEleccion).HasConversion<string>();
+                
+            });
+            mb.Entity<EleccionesEN>().HasOne(e => e.TipoEleccion).WithMany().HasForeignKey(e => e.IdTipo);
+            mb.Entity<ParticipacionEN>()
+                .Property(e => e.FechaDeVoto).HasConversion(v => v.ToDateTime(TimeOnly.MinValue),v => DateOnly.FromDateTime(v));
+        }
 
     }
     

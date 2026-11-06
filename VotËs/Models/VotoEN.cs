@@ -8,7 +8,7 @@ namespace VotES.Models
     public class VotoEN
     {
         [Key]
-        public int VotoId { get; set; }
+        public Guid VotoId { get; set; }
         public int IdEleccion { get; set; }
         public int IdCandidato { get; set; }
 
